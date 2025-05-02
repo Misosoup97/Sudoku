@@ -1,7 +1,3 @@
-## 🖼️ Screenshot from the game
-
-![Roman Numeral Sudoku Screenshot](gameplayScreenshot.png)
-
 # 🧩 Roman Numeral Sudoku (Godot)
 
 A wild twist on classic Sudoku: this puzzle uses **Roman numerals** (`I` to `IX`) and spins constantly as you play. Built in **Godot**, it's both a logic game and a visual challenge.
@@ -22,6 +18,10 @@ A wild twist on classic Sudoku: this puzzle uses **Roman numerals** (`I` to `IX`
 - Valid inputs: Roman numerals `I` to `IX` only
 - When the puzzle is solved correctly, win feedback is triggered
 - Press the exit button to return to the main menu
+
+  ## 🖼️ Screenshot from the game
+
+![Roman Numeral Sudoku Screenshot](gameplayScreenshot.png)
 
 ## 🗂️ Project Structure
 
