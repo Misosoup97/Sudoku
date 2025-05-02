@@ -1,25 +1,30 @@
 # 🧩 Roman Numeral Sudoku (Godot)
 
-A 9x9 Sudoku game using **Roman numerals (I–IX)** instead of digits. Built in **Godot**, this version adds chaos: the board rotates continuously as you play.
+A wild twist on classic Sudoku: this puzzle uses **Roman numerals** (`I` to `IX`) and spins constantly as you play. Built in **Godot**, it's both a logic game and a visual challenge.
 
 ## 🎮 Features
 
-- ✅ 9×9 classic Sudoku layout using Roman numerals `I` through `IX`
-- 🔄 Constant rotation animation (`12 degrees/second`) for challenge and flair
-- 🎨 Two-tone coloring for visual contrast
-- 💡 Menu navigation via `Exit` button (`res://menu.tscn`)
-- 📜 Built with GDScript and Godot's Node2D structure
+- 9×9 Sudoku grid using Roman numerals instead of digits
+- Classic rules: every row, column, and 3×3 box must have `I` through `IX` exactly once
+- Constant board rotation (`12 degrees per second`) for added chaos
+- Simple UI: just **click a box and type** your answer directly
+- Input validation ensures only valid Roman numerals are accepted
+- Win-state detection alerts you when the puzzle is solved
+- Exit button to return to main menu (full game on itch.io)
 
-## 📁 Project Structure
+## 🧩 UI & Controls
 
-- `sudoku.gd` – main script for the Sudoku scene  
-  - `_process()` spins the board  
-  - `_on_exit_pressed()` handles exit button  
-- `SudokuBoard` – contains the 81 cells and board logic  
-- Roman numerals rendered in cells, likely via `Label` nodes
+- Click any cell and type your answer (keyboard input)
+- Valid inputs: Roman numerals `I` to `IX` only
+- When the puzzle is solved correctly, win feedback is triggered
+- Press the exit button to return to the main menu
 
-## 🔧 How It Works
+## 🗂️ Project Structure
 
-- On each frame, the Sudoku board rotates via:  
-  ```gdscript
-  $SudokuBoard.rotation_degrees += 12 * delta
+- `sodoku.tscn` – main scene containing the board
+- `sodoku.gd` – rotates the board and manages scene switching
+- `SodokuBoard.gd` – handles board logic, input checking, and win detection
+- `global.gd` – stores shared state like number of correct cells
+- Cell scripts (e.g., `(0,3).gd`) – control individual input boxes
+- `TextEdit.gd` – manages user input and text rendering
+  $SodokuBoard.rotation_degrees += 12 * delta
