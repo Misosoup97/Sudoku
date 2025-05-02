@@ -1,4 +1,4 @@
- gameplayScreenshot.png
+[ gameplayScreenshot.png](https://github.com/Misosoup97/Sudoku/blob/main/gameplayScreenshot.png)
 
 # 🧩 Roman Numeral Sudoku (Godot)
 
